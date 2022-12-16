@@ -1,19 +1,20 @@
 import * as React from "react";
 
-// importing material UI components
-import AppBar from "@mui/material/AppBar";
-
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-
 export default function Header() {
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+    <div style={{ backgroundColor: "skyblue", height: 45 }}>
+      <div>
+        <div
+          style={{
+            fontSize: 20,
+            color: "white",
+            fontFamily: "sans-serif",
+            marginLeft: 40
+          }}
+        >
           Comments about course
-        </Typography>
-      </Toolbar>
-    </AppBar>
+        </div>
+      </div>
+    </div>
   );
 }

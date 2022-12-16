@@ -7,8 +7,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-        <FormComponent />
       </header>
+      <FormComponent />
     </div>
   );
 }

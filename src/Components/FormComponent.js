@@ -1,28 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { TextArea } from "@react-ui-org/react-ui";
-
-import Button from "@material-ui/core/Button";
 import TableData from "./TableData";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import TextField from "@material-ui/core/TextField";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    "& > *": {
-      margin: theme.spacing(2)
-    }
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-    margin: "1em"
-  }
-}));
-
 function FormComponent() {
   const [usersData, setUsersData] = useState([
     {
@@ -65,46 +43,53 @@ function FormComponent() {
   }
 
   return (
-    <Card variant="outlined">
-      <h3>Share your experiences</h3>
-      <form>
-        <div>
-          <label>Name:</label>
-          <TextField
-            margin="dense"
-            fullWidth={true}
-            value={currentUser.name.value}
-            onChange={handleNameChange}
-            name="name"
-            id="outlined-basic"
-            variant="outlined"
-          />
+    <div className="cont">
+      <div className="box1">
+        <div className="boxin1">
+          <p style={{ fontWeight: "bold" }}>Share Your Experience</p>
 
-          <label>Comments:</label>
+          <form>
+            <div>
+              <label>Name:</label>
+              <input
+                margin="dense"
+                fullWidth={true}
+                value={currentUser.name.value}
+                onChange={handleNameChange}
+                name="name"
+                id="outlined-basic"
+                variant="outlined"
+              />
+              <br />
+              <label>Comments:</label>
 
-          <TextArea
-            margin="dense"
-            fullWidth={true}
-            value={currentUser.comment.value}
-            onChange={handlecommentChange}
-            align="left"
-            name="comment"
-            id="outlined-basic"
-            variant="outlined"
-          />
+              <textarea
+                margin="dense"
+                fullWidth={true}
+                value={currentUser.comment.value}
+                onChange={handlecommentChange}
+                align="left"
+                name="comment"
+                id="outlined-basic"
+                variant="outlined"
+              />
+            </div>
+          </form>
+
+          <button
+            type="Post"
+            onClick={handleAddNewUser}
+            variant="contained"
+            color="primary"
+          >
+            Submit
+          </button>
         </div>
-      </form>
-
-      <Button
-        type="Post"
-        onClick={handleAddNewUser}
-        variant="contained"
-        color="primary"
-      >
-        Submit
-      </Button>
-      <TableData data={usersData} />
-    </Card>
+      </div>
+      <div className="box2">
+        <TableData data={usersData} />
+      </div>
+    </div>
   );
 }
 

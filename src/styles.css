@@ -1,4 +1,56 @@
 .App {
-  font-family: sans-serif;
-  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+}
+input {
+  width: 120%;
+  margin-bottom: 20px;
+}
+textarea {
+  width: 120%;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.box1 {
+  float: right;
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.boxin1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 50px;
+  width: 70%;
+
+  max-width: 500px;
+  word-wrap: break-word;
+}
+label {
+  font-size: 16px;
+}
+.box2 {
+  float: left;
+  width: 50%;
+}
+.cont {
+  align-items: center;
+  margin: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+button {
+  color: white;
+  border-radius: 10px;
+  background-color: #43c4de;
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+}
+.items {
+  margin-top: 10px;
+  width: 40px;
 }

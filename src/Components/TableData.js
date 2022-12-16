@@ -1,34 +1,23 @@
 import React from "react";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@mui/material/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles({
-  table: {
-    // minWidth: 650,
-  }
-});
 
 function TableData({ data }) {
-  const classes = useStyles();
-  console.log("ruchi", data);
-
   return (
-    <Paper>
+    <div>
       {data &&
         data.map((item, id) => (
-          <Typography key={item.id}>
-            <Typography align="left">{item.name.value}</Typography>
-            <Typography align="left">{item.comment.value}</Typography>
-          </Typography>
+          <div key={item.id} className="boxin1">
+            <div
+              align="left"
+              style={{ fontSize: 25, color: "black", fontWeight: "bold" }}
+            >
+              {item.name.value}
+            </div>
+            <div align="left" style={{ fontSize: 20 }}>
+              {item.comment.value}
+            </div>
+          </div>
         ))}
-    </Paper>
+    </div>
   );
 }
 
